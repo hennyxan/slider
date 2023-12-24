@@ -1,0 +1,62 @@
+:root {
+    --height: 30rem;
+    --width: 50rem;
+}
+
+.title {
+    text-align: center;
+}
+
+.container {
+    height: var(--height);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: var(--width);
+}
+
+.slider {
+    background-color: rgb(47, 71, 255);
+    height: var(--height);
+    overflow: hidden;
+    position: relative;
+    width: var(--width);
+}
+
+.slide {
+    align-items: center;
+    display: flex;
+    font-size: 8rem;
+    justify-content: center;
+    height: var(--height);
+    opacity: 0;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+    width: var(--width);
+}
+
+.slide--current {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.controls {
+    display: flex;
+    height: 4rem;
+    justify-content: space-between;
+    width: var(--width);
+}
+
+.control {
+    background-color: rgb(153, 137, 255);
+    cursor: pointer;
+    flex: 1;
+    line-height: 2;
+    padding: 1rem;
+    text-align: center;
+}
+
+.control:hover,
+.control--current {
+    background-color: silver;
+}
